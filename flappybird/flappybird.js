@@ -104,6 +104,6 @@ var state = {
     }
 }
 
-var game = new Phaser.Game(window.innerWidth, window.innerHeight);
+var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS);
 game.state.add('main', state);
 game.state.start('main');
