@@ -1,2 +1,2 @@
-# coderdojo-arnhem
-Contains material used by http://www.coderdojo-arnhem.nl/
+# CoderDojo Arnhem
+Materiaal voor [CoderDojo Arnhem](http://www.coderdojo-arnhem.nl/)
