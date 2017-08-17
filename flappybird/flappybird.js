@@ -16,9 +16,11 @@ var state = {
         game.physics.startSystem(Phaser.Physics.ARCADE);
 
         // Achtergrond
-        game.add.tileSprite(0, 0, 960, 720, 'background');
+        this.background = game.add.sprite(0, 0, 'background');
+        this.background.width = game.width;
+        this.background.height = game.height;
 
-        // Score
+        // Scorefs
         this.score = 0;
         this.labelScore = game.add.text(20, 20, "0", {
             font: "30px Arial",
@@ -39,18 +41,11 @@ var state = {
 
         // Voer iedere 2 seconde de functie 'addPipes' uit
         this.pipes = game.add.group();
-        this.timer = game.time.events.loop(2000, this.addPipes, this);
+        this.timer = game.time.events.loop(3000, this.addPipes, this);
 
         // Geluiden initialiseren
         this.flapSound = game.add.audio('flap');
         this.hitSound = game.add.audio('hit');
-
-        //scaling options
-        this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        this.scale.pageAlignHorizontally = true;
-        this.scale.pageAlignVertically = true;
-        this.scale.setScreenSize(true);
-        this.scale.forceLandscape = true;
     },
 
     update: function () {
@@ -76,7 +71,7 @@ var state = {
 
     addPipes: function () {        
         // Kies een willekeurige positie om het gat te beginnen
-        var holeStart = Math.floor(Math.random() * 420) + 40;
+        var holeStart = Math.floor(Math.random() * (game.height - 300)) + 60;
         var holeEnd = holeStart + 180;
 
         this.addPipe('pipe', 0, holeStart);
@@ -106,10 +101,9 @@ var state = {
         pipe.outOfBoundsKill = true;
 
         pipe.scale.y = size;
-
     }
 }
 
-var game = new Phaser.Game(960, 720);
+var game = new Phaser.Game(window.innerWidth, window.innerHeight);
 game.state.add('main', state);
 game.state.start('main');
