@@ -34,7 +34,8 @@ var state = {
 
         // Spatiebalk voert de functie 'flap' uit 
         var spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
-        spaceKey.onDown.add(this.flap, this);
+        spaceKey.onDown.add(this.flap, this);   
+        game.input.onTap.add(this.flap, this);
 
         // Voer iedere 2 seconde de functie 'addPipes' uit
         this.pipes = game.add.group();
@@ -43,6 +44,13 @@ var state = {
         // Geluiden initialiseren
         this.flapSound = game.add.audio('flap');
         this.hitSound = game.add.audio('hit');
+
+        //scaling options
+        this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+        this.scale.pageAlignHorizontally = true;
+        this.scale.pageAlignVertically = true;
+        this.scale.setScreenSize(true);
+        this.scale.forceLandscape = true;
     },
 
     update: function () {
@@ -92,7 +100,7 @@ var state = {
 
     addPipe: function (name, pos) {
         // Maak de pipe aan
-        var pipe = game.add.sprite(960, pos * 60, name);
+        var pipe = game.add.sprite(game.width, pos * 60, name);
         this.pipes.add(pipe);
 
         // Stel 'physics' in op de pipe zodat we deze een snelheid kunnen geven
