@@ -74,33 +74,25 @@ var state = {
         this.flapSound.play();
     },
 
-    addPipes: function () {
-        // De sprites van de pipes (buizen) zijn 60 pixel hoog
-        // De totale hoogte van de game is 720 pixels
-        // We hebben dus 720 / 60 = 12 vakjes om een pipe te plaatsen
+    addPipes: function () {        
+        // Kies een willekeurige positie om het gat te beginnen
+        var holeStart = Math.floor(Math.random() * 420) + 40;
+        var holeEnd = holeStart + 180;
 
-        // Kies een willekeurig nummer tussen 1 en 8
-        var hole = Math.floor(Math.random() * 8) + 1;
-
-        // Voeg 12 'pipe' onderdelen toe, behalve in de vakjes waar het gat it
-        for (var i = 0; i < 13; i++) {
-            if (i < hole || i > hole + 3) {
-                this.addPipe('pipe', i);
-            }
-        }
-
-        // Plaats de bovenkant en de onderkant van de buis
-        this.addPipe('pipe-top', hole - 1);
-        this.addPipe('pipe-bottom', hole + 3);
+        this.addPipe('pipe', 0, holeStart);
+        this.addPipe('pipe', holeEnd, game.height - holeEnd);
+        
+        this.addPipe('pipe-top', holeStart - 40, 1);
+        this.addPipe('pipe-bottom', holeEnd, 1);
 
         // Verhoog de score met 1 en werk de tekst van het score-label bij
         this.score += 1;
         this.labelScore.text = this.score;
     },
 
-    addPipe: function (name, pos) {
+    addPipe: function (name, posY, size) {
         // Maak de pipe aan
-        var pipe = game.add.sprite(game.width, pos * 60, name);
+        var pipe = game.add.sprite(game.width, posY, name);
         this.pipes.add(pipe);
 
         // Stel 'physics' in op de pipe zodat we deze een snelheid kunnen geven
@@ -112,6 +104,9 @@ var state = {
         // Zorg ervoor dat de pipe opgeruimd wordt wanneer deze buiten het scherm komt
         pipe.checkWorldBounds = true;
         pipe.outOfBoundsKill = true;
+
+        pipe.scale.y = size;
+
     }
 }
 
