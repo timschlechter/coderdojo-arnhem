@@ -26,6 +26,7 @@ var state = {
         // Spatiebalk roept de functie 'flap' aan
         var spaceKey = game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
         spaceKey.onDown.add(this.flap, this);  
+        game.input.onTap.add(this.flap, this);
 
         // Punten op 0 zetten en het label aanmaken
         this.points = 0;
