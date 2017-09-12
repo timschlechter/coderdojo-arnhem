@@ -3,7 +3,7 @@
 ## Om te beginnen
 
 - Installeer Python 3: https://www.python.org/ftp/python/3.6.2/python-3.6.2.exe
-- Download de bestanden die je nodig hebt: timschlechter.github.io/coderdojo-arnhem/flappybird/dist/flappybird.zip
+- Download de bestanden die je nodig hebt: https://timschlechter.github.io/coderdojo-arnhem/flappybird/dist/flappybird.zip
 - Gebruik eventueel een editor waarin je fijn kunt typen, bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/)
 
 Pak het bestand ```flappybird.zip``` uit op je hard schijf en open de map met jouw text editor.
