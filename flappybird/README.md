@@ -252,7 +252,8 @@ create: function() {
 }
 
 score: function() {
-
+    this.points += 1;
+    this.labelPoints.text = this.points;
 }
 ```
 
