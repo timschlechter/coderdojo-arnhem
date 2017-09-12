@@ -29,14 +29,6 @@ var state = {
         // Deze code wordt tijdens het spel steeds opnieuw uitgevoerd
     }
 }
-
-// Maak het spel aan, net zo groot als het scherm
-var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS);
-
-// Voeg de 'state' van ons spel toe en start
-game.state.add('main', state);
-game.state.start('main');
-
 ```
 
 <img src="assets/screenshots/stap0.gif" width=240 />
