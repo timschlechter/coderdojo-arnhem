@@ -4,7 +4,7 @@
 
 - Installeer Python 3: https://www.python.org/ftp/python/3.6.2/python-3.6.2.exe
 - Download de bestanden die je nodig hebt van: https://timschlechter.github.io/coderdojo-arnhem/flappybird/dist/flappybird.zip
-- Gebruik eventueel een editor waarin je fijn kunt typen, bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/)
+- Download en installeer eventueel een editor waarin je fijn kunt typen, bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/)
 
 Pak het bestand ```flappybird.zip``` uit op je hard schijf en open de map met jouw text editor.
 
@@ -170,7 +170,7 @@ create: function() {
     this.timer = game.time.events.loop(3000, this.createPipe, this);
 }
 ```
-De code voor het aanmaken van de buizen is een beetje ingewikkeld. Daarom is de ```createPipe``` functie  al voor je toegevoegd in het bestand ```withPipes.js```. Om deze in je ```state```  te gebruiken voeg je de volgende regel toe _na_ het ```state``` object:
+De code voor het aanmaken van de buizen is wat lastiger, dus die krijg je cadeau! Om dit te gebruiken in je ```state``` voeg je de volgende regel toe _na_ het ```state``` object:
 ```javascript
 var state = {
     //...
