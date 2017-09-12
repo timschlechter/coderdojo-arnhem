@@ -32,6 +32,7 @@ var state = {
 ```
 
 <img src="assets/screenshots/stap0.gif" width=240 />
+<div style="page-break-after: always;"></div>
 
 ## Stap 1. De achtergrond instellen
 Open het bestand ```flappybird.js``` en laad het achtergrond plaatje in de ```preload``` functie:
@@ -85,6 +86,7 @@ create: function() {
 }
 ```
 <img src="assets/screenshots/stap3.gif" width=240 />
+<div style="page-break-after: always;"></div>
 
 ## Stap 4. De vogel laten vliegen
 Als je het spel nu start, zal de vogel als een baksteen naar beneden vallen. Laten we er nu voor zorgen dat ze kan vliegen.
