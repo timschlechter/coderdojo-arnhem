@@ -3,7 +3,7 @@
 ## Om te beginnen
 
 - Installeer Python 3: https://www.python.org/ftp/python/3.6.2/python-3.6.2.exe
-- Download de bestanden die je nodig hebt: https://timschlechter.github.io/coderdojo-arnhem/flappybird/dist/flappybird.zip
+- Download de bestanden die je nodig hebt van: https://timschlechter.github.io/coderdojo-arnhem/flappybird/dist/flappybird.zip
 - Gebruik eventueel een editor waarin je fijn kunt typen, bijvoorbeeld [Visual Studio Code](https://code.visualstudio.com/)
 
 Pak het bestand ```flappybird.zip``` uit op je hard schijf en open de map met jouw text editor.
@@ -11,7 +11,7 @@ Pak het bestand ```flappybird.zip``` uit op je hard schijf en open de map met jo
 ## Het spel starten
 We gaan het spel bouwen in de taal JavaScript. Deze code laten we uitvoeren door een _webserver_ programma.
 
-Je start de webserver door het programma `start-python-webserver.bat` te starten. Je kunt het spel dan in een webbrowser openen op[http://localhost:8000](http://localhost:8000).
+Je start de webserver door het programma `start-python-webserver.bat` te starten. Je kunt het spel dan in een webbrowser openen op [http://localhost:8000](http://localhost:8000).
 
 We gaan onze code schrijven in het bestand ```flappybird.js```:
 
